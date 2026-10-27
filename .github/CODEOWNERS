@@ -1,0 +1,31 @@
+# Responsables de cada parte del repositorio.
+# Cuando un pull request modifica archivos de un responsable, GitHub le pide la revisión
+# automáticamente: si Victor toca un archivo de phishing, se avisa a Dylan, y al revés.
+#
+# Configuración de la rama principal (Settings > Branches > protección de main):
+#   - "Require a pull request before merging" con 1 aprobación.
+#   - NO activar "Require review from Code Owners": bloquearía los pull requests de cada uno
+#     sobre sus propios módulos, porque nadie puede aprobar su propio pull request.
+# Con 1 aprobación obligatoria, todo cambio lo revisa siempre el otro integrante.
+#
+# IMPORTANTE: sustituir @usuario-victor por el usuario de GitHub de Victor.
+# La última línea que coincide con un archivo es la que se aplica.
+
+# Archivos comunes: estructura, infraestructura y documentación (ambos)
+*                                   @gradosvfx @usuario-victor
+
+# Módulos de Dylan: phishing y HTTP/HTTPS
+/web/data/phishing.json             @gradosvfx
+/web/js/juegos/phishing.js          @gradosvfx
+/web/css/juegos/phishing.css        @gradosvfx
+/web/data/https.json                @gradosvfx
+/web/js/juegos/https.js             @gradosvfx
+/web/css/juegos/https.css           @gradosvfx
+
+# Módulos de Victor: contraseñas e ingeniería social
+/web/data/contrasenas.json          @usuario-victor
+/web/js/juegos/contrasenas.js       @usuario-victor
+/web/css/juegos/contrasenas.css     @usuario-victor
+/web/data/ingenieria.json           @usuario-victor
+/web/js/juegos/ingenieria.js        @usuario-victor
+/web/css/juegos/ingenieria.css      @usuario-victor

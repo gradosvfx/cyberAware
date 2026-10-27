@@ -1,0 +1,6 @@
+# Ajustes propios de CyberAware que se suman a la configuración de CrowdSec.
+# Las alertas y decisiones se eliminan a los 7 días.
+db_config:
+  flush:
+    max_age: 7d
+    max_items: 5000

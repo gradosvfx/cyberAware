@@ -1,0 +1,11 @@
+# Lista blanca propia de CyberAware. Sustituye a crowdsecurity/whitelists,
+# que ignora todas las IPs privadas (y en una red local, todas lo son).
+# IMPORTANTE: sustituir 192.168.1.10 por la IP del equipo de administración (ADMIN_IP del .env)
+# y reiniciar CrowdSec: docker compose restart crowdsec
+name: cyberaware/lista-blanca
+description: "Solo localhost y el equipo de administración"
+whitelist:
+  reason: "Equipo de administración de CyberAware"
+  ip:
+    - "127.0.0.1"
+    - "192.168.1.10"

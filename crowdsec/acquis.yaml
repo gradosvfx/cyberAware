@@ -1,0 +1,5 @@
+# Origen de los registros que analiza CrowdSec: accesos de Caddy en JSON.
+filenames:
+  - /var/log/caddy/*.log
+labels:
+  type: caddy

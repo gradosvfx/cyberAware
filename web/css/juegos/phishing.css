@@ -1,0 +1,35 @@
+/* Estilos del minijuego: correo de phishing.
+   Responsable: Dylan. Se carga solo al abrir la actividad del módulo.
+   Usa las variables de color y tipografía definidas en css/estilos.css. */
+
+.correo-zona { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 1.5rem; align-items: start; }
+.correo { border: 1px solid var(--linea); border-radius: var(--radio); background: var(--superficie); }
+.correo-cabecera { padding: 1rem 1.25rem; border-bottom: 1px solid var(--linea); background: var(--papel); font-size: .97rem; }
+.correo-cabecera div { margin-bottom: .2rem; }
+.correo-asunto { font-size: 1.15rem; font-weight: 700; margin: .4rem 0 0; }
+.correo-cuerpo { padding: 1.25rem; max-width: 64ch; }
+.correo-cuerpo p { margin-bottom: .9rem; }
+.correo-estado { font-family: var(--mono); font-size: .85rem; color: var(--apagado); padding: .4rem 1.25rem; border-top: 1px solid var(--linea); min-height: 2rem; }
+.zona {
+  font: inherit; color: inherit; text-align: left; line-height: inherit;
+  background: none; border: 0; padding: 0 .1rem; margin: 0;
+  border-bottom: 2px dotted var(--linea); cursor: pointer;
+}
+.zona:hover { background: var(--senal-fondo); }
+.zona.marcada-ok { background: var(--seguro-fondo); border-bottom: 2px solid var(--seguro); }
+.zona.marcada-error { background: var(--peligro-fondo); border-bottom: 2px solid var(--peligro); }
+.zona.no-encontrada { background: var(--senal-fondo); border-bottom: 2px solid var(--senal); }
+.zona-enlace {
+  display: inline-block; margin: .3rem 0 1rem; padding: .6rem 1.2rem; border-radius: var(--radio);
+  background: #2B5DB8; color: #fff; font-weight: 700; border: 0;
+}
+.zona-enlace:hover { background: #244f9c; }
+.zona-enlace.marcada-ok { outline: 3px solid var(--seguro); background: #2B5DB8; }
+.zona-enlace.no-encontrada { outline: 3px solid var(--senal); background: #2B5DB8; }
+.nota-lateral { position: sticky; top: 1rem; }
+.marcador { font-size: .95rem; color: var(--tinta-suave); }
+
+@media (max-width: 1100px) {
+  .correo-zona { grid-template-columns: 1fr; }
+  .nota-lateral { position: static; }
+}

@@ -1,0 +1,240 @@
+{
+  "id": "phishing",
+  "descripcion": "El phishing es un engaño, normalmente por correo, para que pulses un enlace, abras un archivo o entregues tus datos. En este módulo aprenderás a detectar sus señales más habituales.",
+  "preguntas": [
+    {
+      "id": "f1",
+      "enunciado": "Recibes un correo de tu banco que dice que tu cuenta se bloqueará en 24 horas si no confirmas tus datos. ¿Qué haces?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Pulso el enlace y confirmo los datos rápidamente para evitar el bloqueo."
+        },
+        {
+          "id": "b",
+          "texto": "Respondo al correo para pedir más información."
+        },
+        {
+          "id": "c",
+          "texto": "No uso el enlace: entro en la web del banco escribiendo yo la dirección o llamo a su teléfono oficial."
+        },
+        {
+          "id": "d",
+          "texto": "Lo reenvío a mis compañeros para preguntarles qué hacer."
+        }
+      ],
+      "correcta": "c",
+      "explicacion": "Ante cualquier duda, no uses los enlaces ni los teléfonos del propio mensaje. Comprueba la situación por un canal que ya conozcas: la dirección oficial escrita por ti o el teléfono de siempre. Responder al correo solo te pone en contacto con el atacante."
+    },
+    {
+      "id": "f2",
+      "enunciado": "¿Cómo puedes saber a qué web te lleva un enlace de un correo antes de pulsarlo?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Leyendo el texto del enlace o del botón."
+        },
+        {
+          "id": "b",
+          "texto": "Pasando el ratón por encima, sin pulsar, y mirando la dirección real que aparece."
+        },
+        {
+          "id": "c",
+          "texto": "Si el correo tiene el logotipo de la empresa, el enlace es correcto."
+        },
+        {
+          "id": "d",
+          "texto": "No se puede saber hasta pulsarlo."
+        }
+      ],
+      "correcta": "b",
+      "explicacion": "El texto de un enlace puede decir cualquier cosa. Al pasar el ratón por encima, el programa de correo o el navegador muestra la dirección real a la que lleva. Si el dominio no es exactamente el de la empresa, no lo pulses."
+    },
+    {
+      "id": "f3",
+      "enunciado": "¿Cuál de estas señales es más típica de un correo de phishing?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Te llama por tu nombre y menciona un pedido que hiciste de verdad."
+        },
+        {
+          "id": "b",
+          "texto": "Mete prisa o amenaza con consecuencias y te pide contraseñas o datos bancarios."
+        },
+        {
+          "id": "c",
+          "texto": "Llega en horario de trabajo."
+        },
+        {
+          "id": "d",
+          "texto": "Tiene una firma con el nombre y la dirección de la empresa."
+        }
+      ],
+      "correcta": "b",
+      "explicacion": "La urgencia y las amenazas buscan que actúes sin pensar, y ninguna entidad legítima te pedirá tu contraseña o tu PIN por correo. Tu nombre, un pedido real o una firma no garantizan nada: los atacantes también pueden conseguir y copiar esos datos."
+    }
+  ],
+  "teoria": {
+    "titulo": "Cómo reconocer un correo de phishing",
+    "duracion": "3-4 minutos",
+    "video": "media/videos/phishing.mp4",
+    "subtitulos": null,
+    "transcripcion": [
+      "El phishing es un engaño en el que alguien se hace pasar por una empresa o persona de confianza para que pulses un enlace, abras un archivo o entregues tus datos. Suele llegar por correo, pero también por SMS o mensajería.",
+      "Fíjate primero en el remitente. El nombre que se muestra puede ser cualquiera; lo importante es el dominio, lo que va después de la arroba. Los atacantes usan dominios parecidos al real, con palabras añadidas o letras cambiadas.",
+      "Desconfía de la urgencia y las amenazas: tu cuenta se bloqueará en 24 horas, tienes una multa pendiente, último aviso. Buscan que actúes sin pensar.",
+      "Antes de pulsar un enlace, pasa el ratón por encima y mira la dirección real. Si no coincide con la web oficial, no lo pulses. Y nunca introduzcas contraseñas, códigos o datos bancarios desde un enlace recibido.",
+      "Otras pistas son los saludos genéricos, como estimado cliente, los adjuntos inesperados y las peticiones fuera de lo normal. Las faltas de ortografía ya no son una señal fiable: muchos correos fraudulentos están bien escritos.",
+      "Si tienes dudas, comprueba el mensaje por otro canal, por ejemplo escribiendo tú la dirección de la web o llamando al teléfono de siempre, y avisa al responsable de seguridad de tu empresa."
+    ]
+  },
+  "caso": {
+    "titulo": "Facturas falsas: el fraude de más de 100 millones de dólares a Google y Facebook",
+    "fecha": "Entre 2013 y 2015, con condena en 2019",
+    "parrafos": [
+      "Entre 2013 y 2015, un ciudadano lituano, Evaldas Rimasauskas, se hizo pasar por Quanta Computer, un fabricante taiwanés de hardware que era proveedor real de Google y de Facebook.",
+      "Envió a empleados de ambas empresas correos que parecían venir del proveedor, con facturas, contratos y sellos falsificados. Los pagos se dirigían a cuentas bancarias controladas por los estafadores en varios países.",
+      "Las dos compañías pagaron en total más de 100 millones de dólares antes de descubrir el engaño. Gran parte del dinero se recuperó después.",
+      "En 2019, Rimasauskas se declaró culpable y fue condenado en Nueva York a cinco años de prisión."
+    ],
+    "leccion": "Incluso las grandes empresas tecnológicas pueden caer en un correo bien preparado. Ante cualquier petición de pago o cambio de cuenta bancaria, hay que comprobarla por un canal independiente, por ejemplo llamando al contacto habitual del proveedor, y no fiarse solo del correo.",
+    "fuentes": [
+      {
+        "nombre": "CNBC: Facebook and Google were victims of $100M payment scam (abril de 2017)",
+        "url": "https://www.cnbc.com/2017/04/27/facebook-and-google-were-victims-of-a-100-million-dollar-phishing-scam-fortune.html"
+      },
+      {
+        "nombre": "Computing: US court jails scammer who fleeced Facebook and Google out of $120m in email fraud (2019)",
+        "url": "https://computing.co.uk/news/3084788/google-facebook-email-phishing-fraud"
+      }
+    ]
+  },
+  "actividad": {
+    "tipo": "phishing",
+    "titulo": "Encuentra las señales de alarma en este correo.",
+    "instrucciones": "Este correo es una simulación. Pulsa cada parte que te parezca sospechosa: verás una nota que explica por qué. Ojo: marcar partes que no son sospechosas resta puntos. Cuando creas que las has encontrado todas, pulsa «He terminado».",
+    "correo": {
+      "de": [
+        {
+          "texto": "Banco Ejemplo, Seguridad <avisos@bancoejemplo-seguridad.example>",
+          "zona": "remitente"
+        }
+      ],
+      "para": "empleado07@empresa.example",
+      "fecha": [
+        {
+          "texto": "hoy, 9:14",
+          "zona": "fecha"
+        }
+      ],
+      "asunto": [
+        {
+          "texto": "Aviso de seguridad sobre su cuenta"
+        }
+      ],
+      "cuerpo": [
+        [
+          {
+            "texto": "Estimado cliente:",
+            "zona": "saludo"
+          }
+        ],
+        [
+          {
+            "texto": "Hemos detectado un acceso inusual a su cuenta.",
+            "zona": "acceso"
+          },
+          {
+            "texto": " "
+          },
+          {
+            "texto": "Si no verifica sus datos en las próximas 24 horas, su cuenta quedará bloqueada de forma permanente.",
+            "zona": "urgencia"
+          }
+        ],
+        [
+          {
+            "texto": "Para ello, "
+          },
+          {
+            "texto": "introduzca su usuario, su contraseña y el PIN de su tarjeta",
+            "zona": "datos"
+          },
+          {
+            "texto": " en el siguiente enlace:"
+          }
+        ],
+        [
+          {
+            "boton": {
+              "texto": "Verificar mi cuenta",
+              "destino": "http://bancoejemplo.verificacion-clientes.example/acceso",
+              "zona": "enlace"
+            }
+          }
+        ],
+        [
+          {
+            "texto": "Atentamente,"
+          }
+        ],
+        [
+          {
+            "texto": "Banco Ejemplo, S.A. Calle Mayor 1, 28013 Madrid",
+            "zona": "pie"
+          }
+        ]
+      ]
+    },
+    "zonas": {
+      "remitente": {
+        "sospechosa": true,
+        "titulo": "el remitente",
+        "explicacion": "El dominio es bancoejemplo-seguridad.example y no el del banco (bancoejemplo.example). Añadir palabras como «seguridad» o «avisos» al dominio real es un truco habitual."
+      },
+      "saludo": {
+        "sospechosa": true,
+        "titulo": "el saludo genérico",
+        "explicacion": "Tu banco sabe cómo te llamas. Un saludo genérico como «Estimado cliente» indica que el correo se ha enviado a muchas personas a la vez."
+      },
+      "urgencia": {
+        "sospechosa": true,
+        "titulo": "la urgencia y la amenaza",
+        "explicacion": "Meter prisa («24 horas») y amenazar con un bloqueo permanente busca que actúes sin pararte a pensar."
+      },
+      "datos": {
+        "sospechosa": true,
+        "titulo": "la petición de contraseña y PIN",
+        "explicacion": "Ningún banco te pedirá nunca tu contraseña ni el PIN de tu tarjeta por correo o a través de un enlace."
+      },
+      "enlace": {
+        "sospechosa": true,
+        "titulo": "el enlace",
+        "explicacion": "Al pasar el ratón por encima se ve la dirección real: http://bancoejemplo.verificacion-clientes.example. El dominio no es el del banco y, además, no usa HTTPS."
+      },
+      "acceso": {
+        "sospechosa": false,
+        "titulo": "el aviso de acceso inusual",
+        "explicacion": "Los bancos sí envían avisos de seguridad legítimos. Esta frase por sí sola no es una señal: lo sospechoso es lo que te piden hacer después y desde dónde."
+      },
+      "fecha": {
+        "sospechosa": false,
+        "titulo": "la fecha",
+        "explicacion": "La fecha y la hora de llegada no indican nada: los correos fraudulentos llegan a cualquier hora."
+      },
+      "pie": {
+        "sospechosa": false,
+        "titulo": "el pie con la dirección",
+        "explicacion": "Un pie con la dirección de la empresa no es señal de fraude, pero tampoco garantiza que el correo sea auténtico: es muy fácil de copiar."
+      }
+    }
+  },
+  "resumen": [
+    "Mira el dominio del remitente, no solo el nombre: los atacantes usan dominios parecidos al real.",
+    "La urgencia, las amenazas y los saludos genéricos son señales de alarma.",
+    "Antes de pulsar, pasa el ratón por encima del enlace y comprueba la dirección real.",
+    "Nadie legítimo te pedirá contraseñas, códigos o el PIN por correo.",
+    "Si dudas, comprueba por otro canal (dirección escrita por ti o teléfono habitual) y avisa a seguridad."
+  ]
+}

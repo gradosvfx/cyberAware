@@ -1,0 +1,204 @@
+{
+  "id": "contrasenas",
+  "descripcion": "Las contraseñas débiles o repetidas son una de las puertas de entrada más habituales para los atacantes. En este módulo verás qué hace fuerte a una contraseña y cómo protegerte aunque una se filtre.",
+  "preguntas": [
+    {
+      "id": "c1",
+      "enunciado": "¿Qué hace más difícil adivinar una contraseña?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Que tenga mayúsculas, minúsculas y un número, aunque solo tenga 8 caracteres."
+        },
+        {
+          "id": "b",
+          "texto": "Que sea larga, por ejemplo una frase de varias palabras que no tengan relación entre sí."
+        },
+        {
+          "id": "c",
+          "texto": "Que incluya el nombre de la empresa y el año actual."
+        },
+        {
+          "id": "d",
+          "texto": "Cambiarla todos los meses por otra parecida."
+        }
+      ],
+      "correcta": "b",
+      "explicacion": "La longitud es lo que más dificulta los ataques: cada carácter más multiplica las combinaciones posibles. Una frase larga de palabras sin relación es fuerte y fácil de recordar. Los cambios periódicos por contraseñas parecidas no ayudan, porque los atacantes prueban esas variaciones."
+    },
+    {
+      "id": "c2",
+      "enunciado": "Usas la misma contraseña en el correo del trabajo y en una tienda online. La tienda sufre una filtración de datos. ¿Qué riesgo hay?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Ninguno, porque son servicios distintos."
+        },
+        {
+          "id": "b",
+          "texto": "Solo se pierde la cuenta de la tienda."
+        },
+        {
+          "id": "c",
+          "texto": "Los atacantes pueden probar esa misma contraseña en tu correo del trabajo y en otros servicios."
+        },
+        {
+          "id": "d",
+          "texto": "La filtración borra la contraseña y hay que crear otra."
+        }
+      ],
+      "correcta": "c",
+      "explicacion": "Los atacantes prueban automáticamente las contraseñas filtradas en muchos otros servicios. Si la repites, una filtración en cualquier web pone en riesgo todas tus cuentas. Por eso cada servicio debe tener su propia contraseña."
+    },
+    {
+      "id": "c3",
+      "enunciado": "¿Para qué sirve la verificación en dos pasos?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Para no tener que recordar la contraseña."
+        },
+        {
+          "id": "b",
+          "texto": "Para que, aunque alguien robe tu contraseña, también necesite un segundo factor, como un código en tu móvil."
+        },
+        {
+          "id": "c",
+          "texto": "Para que la contraseña caduque antes."
+        },
+        {
+          "id": "d",
+          "texto": "Para cifrar los correos que envías."
+        }
+      ],
+      "correcta": "b",
+      "explicacion": "La verificación en dos pasos añade una segunda comprobación (un código, una aplicación o una llave física). Así, una contraseña robada por sí sola no basta para entrar en tu cuenta."
+    }
+  ],
+  "teoria": {
+    "titulo": "Contraseñas que protegen de verdad",
+    "duracion": "3-4 minutos",
+    "video": "media/videos/contrasenas.mp4",
+    "subtitulos": null,
+    "transcripcion": [
+      "Una contraseña es la llave de tus cuentas. Los atacantes no suelen adivinarlas una a una: usan programas que prueban millones de combinaciones y listas de contraseñas filtradas en otros ataques.",
+      "Lo que más protege es la longitud. Una contraseña de 15 caracteres o más es mucho más difícil de romper que una corta llena de símbolos. Una buena opción es una frase de varias palabras sin relación entre sí, por ejemplo cuatro palabras al azar separadas por guiones.",
+      "Evita lo previsible: palabras comunes, tu nombre, el de la empresa, fechas, secuencias como 1234 o qwerty, y trucos conocidos como cambiar la o por un cero. Los programas de ataque ya prueban esas variaciones.",
+      "Usa una contraseña distinta para cada servicio. Si una web sufre una filtración, los atacantes probarán esa contraseña en tu correo, en tu banco y en las herramientas del trabajo. Un gestor de contraseñas te permite tener una distinta en cada sitio sin tener que memorizarlas.",
+      "Activa la verificación en dos pasos siempre que puedas. Aunque roben tu contraseña, el atacante necesitará también el código de tu móvil o tu llave de seguridad.",
+      "Y nunca compartas tu contraseña: ni con compañeros ni con alguien que diga ser del servicio técnico. Nadie legítimo te la va a pedir."
+    ]
+  },
+  "caso": {
+    "titulo": "Colonial Pipeline: una sola contraseña paró el mayor oleoducto de Estados Unidos",
+    "fecha": "Estados Unidos, abril y mayo de 2021",
+    "parrafos": [
+      "En mayo de 2021, la empresa Colonial Pipeline, que transporta combustible por la costa este de Estados Unidos, sufrió un ataque de ransomware. Para contenerlo, detuvo por completo su red de oleoductos, de unos 8.800 kilómetros, y en varios estados hubo gasolineras sin combustible.",
+      "Según la investigación, los atacantes entraron a finales de abril a través de una cuenta de VPN antigua que ya no se usaba, pero que seguía activa. Les bastó con el nombre de usuario y la contraseña, porque esa cuenta no tenía verificación en dos pasos.",
+      "El director ejecutivo explicó ante el Senado que la contraseña no era sencilla. Aun así, los investigadores la encontraron en una lista de contraseñas filtradas, lo que apunta a que se había reutilizado en otro servicio que fue atacado.",
+      "La empresa pagó un rescate de unos 4,4 millones de dólares; las autoridades recuperaron después una parte."
+    ],
+    "leccion": "Una contraseña complicada no basta si se repite en otros servicios: cuando uno de ellos se filtra, la contraseña queda expuesta. Usar contraseñas distintas, activar la verificación en dos pasos y dar de baja las cuentas que ya no se usan habría cerrado esa puerta.",
+    "fuentes": [
+      {
+        "nombre": "GovInfoSecurity: Colonial CEO at Senate Hearing Details Ransomware Attack (junio de 2021)",
+        "url": "https://www.govinfosecurity.com/colonial-ceo-at-senate-hearing-details-ransomware-attack-a-16836"
+      },
+      {
+        "nombre": "Al Jazeera / Bloomberg: Hackers breached Colonial Pipeline with one compromised password (junio de 2021)",
+        "url": "https://www.aljazeera.com/economy/2021/6/4/hackers-breached-colonial-pipeline-with-one-compromised-password"
+      }
+    ]
+  },
+  "actividad": {
+    "tipo": "contrasenas",
+    "titulo": "Crea una contraseña fuerte (inventada) con ayuda del comprobador.",
+    "instrucciones": "Prueba distintas contraseñas inventadas y fíjate en cómo cambia el resultado. La actividad termina cuando consigas una contraseña fuerte. Pista: prueba con una frase de varias palabras que no tengan relación entre sí.",
+    "longitudMinima": 15,
+    "palabrasComunes": [
+      "password",
+      "contrasena",
+      "clave",
+      "qwerty",
+      "admin",
+      "administrador",
+      "usuario",
+      "bienvenido",
+      "welcome",
+      "hola",
+      "amor",
+      "teamo",
+      "iloveyou",
+      "letmein",
+      "dragon",
+      "monkey",
+      "secreto",
+      "princesa",
+      "superman",
+      "batman",
+      "pokemon",
+      "minecraft",
+      "futbol",
+      "barcelona",
+      "barca",
+      "madrid",
+      "realmadrid",
+      "atletico",
+      "sevilla",
+      "betis",
+      "valencia",
+      "espana",
+      "verano",
+      "invierno",
+      "primavera",
+      "otono",
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre",
+      "lunes",
+      "martes",
+      "miercoles",
+      "jueves",
+      "viernes",
+      "sabado",
+      "domingo",
+      "empresa",
+      "trabajo",
+      "oficina",
+      "cyberaware",
+      "maria",
+      "jose",
+      "antonio",
+      "manuel",
+      "carmen",
+      "david",
+      "laura",
+      "javier",
+      "1234",
+      "12345",
+      "123456",
+      "12345678",
+      "123456789",
+      "1111",
+      "0000",
+      "abc123",
+      "qwe123"
+    ]
+  },
+  "resumen": [
+    "La longitud es lo más importante: usa 15 caracteres o más, por ejemplo una frase de palabras sin relación.",
+    "Evita lo previsible: palabras comunes, nombres, fechas, secuencias y cambios de letras por números.",
+    "Una contraseña distinta para cada servicio; un gestor de contraseñas te ayuda a no repetirlas.",
+    "Activa la verificación en dos pasos: una contraseña robada no bastará para entrar.",
+    "Nunca compartas tu contraseña, aunque te la pida alguien que diga ser del servicio técnico."
+  ]
+}

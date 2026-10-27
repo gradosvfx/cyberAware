@@ -1,0 +1,152 @@
+# CyberAware: definición de todos los contenedores, redes y volúmenes.
+# El mismo archivo sirve para desarrollo (Docker Desktop) y para el servidor;
+# las diferencias entre entornos van en el archivo .env (ver .env.example).
+#
+# Arrancar:  docker compose up -d
+# Detener:   docker compose down        (NUNCA con -v: borraría la base de datos y los certificados)
+
+name: cyberaware
+
+services:
+  caddy:
+    image: caddy:2.11.7-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:?Falta SITE_ADDRESS en .env}
+      ADMIN_IP: ${ADMIN_IP:?Falta ADMIN_IP en .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_logs:/var/log/caddy
+    networks: [frontend, backend]
+    depends_on: [web, waf, pocketbase]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 256m
+
+  web:
+    image: nginx:1.30.5-alpine
+    restart: unless-stopped
+    volumes:
+      - ./web:/usr/share/nginx/html:ro
+    networks: [backend]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 128m
+
+  waf:
+    image: owasp/modsecurity-crs:4.25.2-nginx-alpine-lts
+    restart: unless-stopped
+    environment:
+      BACKEND: http://pocketbase:8090
+      PORT: "8080"
+      # DetectionOnly al implantar; On (bloqueo) antes de la prueba con usuarios.
+      MODSEC_RULE_ENGINE: ${WAF_MODO:-DetectionOnly}
+      BLOCKING_PARANOIA: "1"
+      # PocketBase usa PATCH para modificar y DELETE para borrar (solo superusuario).
+      ALLOWED_METHODS: "GET HEAD POST OPTIONS PATCH DELETE"
+      # Registro de auditoría solo de peticiones relevantes y sin cabeceras (B) ni cuerpos (C, I, E):
+      # así no se guardan tokens de autorización ni contraseñas.
+      MODSEC_AUDIT_ENGINE: RelevantOnly
+      MODSEC_AUDIT_LOG: /dev/stdout
+      MODSEC_AUDIT_LOG_FORMAT: JSON
+      MODSEC_AUDIT_LOG_PARTS: "AHZ"
+      # La IP real del usuario llega de Caddy en X-Forwarded-For.
+      REAL_IP_HEADER: X-Forwarded-For
+      SET_REAL_IP_FROM: 172.30.10.0/24
+    volumes:
+      - ./waf/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf:/etc/modsecurity.d/owasp-crs/rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf:ro
+      - ./waf/RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf:/etc/modsecurity.d/owasp-crs/rules/RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf:ro
+    networks: [backend]
+    depends_on: [pocketbase]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 256m
+
+  pocketbase:
+    build:
+      context: ./pocketbase
+      args:
+        PB_VERSION: "0.40.5"
+        PB_SHA256: "1dbea1b01eb3dfe64953513859d01e759c96650c4e3264fa4eecd54b769382e4"
+    image: cyberaware/pocketbase:0.40.5
+    restart: unless-stopped
+    environment:
+      PB_AUTOMIGRATE: ${PB_AUTOMIGRATE:-false}
+    volumes:
+      - pb_data:/pb/pb_data
+      # ro en el servidor; rw en desarrollo, donde PocketBase genera las migraciones.
+      - ./pocketbase/pb_migrations:/pb/pb_migrations:${PB_MIGRATIONS_MODO:-ro}
+    networks: [backend]
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:8090/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 256m
+
+  crowdsec:
+    image: crowdsecurity/crowdsec:v1.8.1
+    restart: unless-stopped
+    environment:
+      COLLECTIONS: "crowdsecurity/caddy"
+      # Se sustituye la lista blanca estándar (que ignora las IPs privadas) por la propia.
+      DISABLE_PARSERS: "crowdsecurity/whitelists"
+      # Prueba piloto: no se envían señales al servicio central de CrowdSec.
+      DISABLE_ONLINE_API: "true"
+      # Registra automáticamente el bouncer de cortafuegos con esta clave.
+      BOUNCER_KEY_cortafuegos: ${CROWDSEC_BOUNCER_KEY:?Falta CROWDSEC_BOUNCER_KEY en .env}
+    ports:
+      # API local solo en la dirección local del servidor, para el bouncer.
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./crowdsec/acquis.yaml:/etc/crowdsec/acquis.yaml:ro
+      - ./crowdsec/config.yaml.local:/etc/crowdsec/config.yaml.local:ro
+      - ./crowdsec/lista-blanca.yaml:/etc/crowdsec/parsers/s02-enrich/cyberaware-lista-blanca.yaml:ro
+      - caddy_logs:/var/log/caddy:ro
+      - crowdsec_data:/var/lib/crowdsec/data
+      - crowdsec_config:/etc/crowdsec
+    networks: [default]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 512m
+
+  backups:
+    image: offen/docker-volume-backup:v2.49.1
+    restart: unless-stopped
+    environment:
+      # 13:00 UTC: una hora después de la copia programada de PocketBase (12:00 UTC).
+      BACKUP_CRON_EXPRESSION: "0 13 * * *"
+      BACKUP_FILENAME: "cyberaware-%Y-%m-%dT%H-%M-%S.tar.gz"
+      BACKUP_PRUNING_PREFIX: "cyberaware-"
+      BACKUP_RETENTION_DAYS: "7"
+    volumes:
+      # Solo la carpeta de copias de PocketBase (no la base de datos en uso ni sus registros vivos).
+      - type: volume
+        source: pb_data
+        target: /backup/pocketbase-copias
+        read_only: true
+        volume:
+          subpath: backups
+      - caddy_data:/backup/caddy_data:ro
+      - ${DISCO_COPIAS:-./copias-local}:/archive
+    network_mode: none
+    depends_on: [pocketbase]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 128m
+
+networks:
+  frontend:
+  backend:
+    internal: true
+    ipam:
+      config:
+        - subnet: 172.30.10.0/24
+  default:
+
+volumes:
+  caddy_data:
+  caddy_logs:
+  pb_data:
+  crowdsec_data:
+  crowdsec_config:

@@ -1,0 +1,24 @@
+{
+  "modulos": [
+    {
+      "id": "contrasenas",
+      "titulo": "Contraseñas",
+      "resumen": "Cómo crear contraseñas difíciles de adivinar y proteger tus cuentas aunque una contraseña se filtre."
+    },
+    {
+      "id": "phishing",
+      "titulo": "Phishing",
+      "resumen": "Cómo reconocer un correo fraudulento antes de pulsar un enlace o dar tus datos."
+    },
+    {
+      "id": "ingenieria",
+      "titulo": "Ingeniería social",
+      "resumen": "Cómo actuar cuando alguien se hace pasar por tu jefe o por el servicio técnico para manipularte."
+    },
+    {
+      "id": "https",
+      "titulo": "Webs falsas y HTTP/HTTPS",
+      "resumen": "Qué significa realmente el candado del navegador y cómo comprobar que una web es la auténtica."
+    }
+  ]
+}

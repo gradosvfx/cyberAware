@@ -1,0 +1,21 @@
+/* Estilos del minijuego: chat de ingeniería social.
+   Responsable: Victor. Se carga solo al abrir la actividad del módulo.
+   Usa las variables de color y tipografía definidas en css/estilos.css. */
+
+.chat { max-width: 720px; border: 1px solid var(--linea); border-radius: var(--radio); background: var(--papel); }
+.chat-cabecera { padding: .8rem 1.1rem; border-bottom: 1px solid var(--linea); background: var(--superficie); }
+.chat-cabecera strong { display: block; }
+.chat-cabecera span { font-size: .9rem; color: var(--apagado); }
+.chat-mensajes { padding: 1.1rem; display: flex; flex-direction: column; gap: .6rem; min-height: 200px; }
+.burbuja { max-width: 80%; padding: .65rem .9rem; border-radius: 12px; line-height: 1.45; }
+.burbuja.atacante { background: var(--superficie); border: 1px solid var(--linea); align-self: flex-start; border-bottom-left-radius: 3px; }
+.burbuja.usuario { background: var(--tinta); color: #fff; align-self: flex-end; border-bottom-right-radius: 3px; }
+.burbuja.sistema { align-self: center; background: none; color: var(--apagado); font-style: italic; font-size: .92rem; }
+.burbuja .adjunto { display: block; margin-top: .4rem; font-family: var(--mono); font-size: .9rem; padding: .35rem .6rem; background: var(--papel); border-radius: 4px; }
+.chat-opciones { padding: 1rem 1.1rem; border-top: 1px solid var(--linea); background: var(--superficie); display: grid; gap: .5rem; }
+.chat-opciones .boton { justify-content: flex-start; text-align: left; font-weight: 400; }
+.infeccion {
+  border: 3px solid var(--peligro); background: var(--peligro-fondo);
+  padding: 1rem 1.2rem; border-radius: var(--radio);
+}
+.infeccion strong { color: var(--peligro); font-size: 1.1rem; display: block; }

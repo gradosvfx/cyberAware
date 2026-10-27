@@ -1,0 +1,263 @@
+{
+  "id": "https",
+  "descripcion": "El candado del navegador indica que la conexión está cifrada, pero no que la web sea auténtica. En este módulo aprenderás qué significan HTTP y HTTPS y cómo detectar webs falsas.",
+  "preguntas": [
+    {
+      "id": "h1",
+      "enunciado": "¿Qué garantiza el candado (HTTPS) en la barra de direcciones?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Que la web es segura y de confianza."
+        },
+        {
+          "id": "b",
+          "texto": "Que la comunicación con la web va cifrada, pero no que la web sea legítima."
+        },
+        {
+          "id": "c",
+          "texto": "Que la web ha sido revisada por el Gobierno."
+        },
+        {
+          "id": "d",
+          "texto": "Que la web no tiene virus."
+        }
+      ],
+      "correcta": "b",
+      "explicacion": "HTTPS cifra la comunicación entre tu navegador y la web, para que nadie la lea por el camino. Pero cualquiera, también un estafador, puede conseguir un certificado para su web falsa. El candado no dice nada de quién está detrás."
+    },
+    {
+      "id": "h2",
+      "enunciado": "Estás en una wifi pública y la página donde vas a escribir tu contraseña empieza por http:// (sin «s»). ¿Qué riesgo hay?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Ninguno, porque la contraseña está oculta con puntos."
+        },
+        {
+          "id": "b",
+          "texto": "Los datos viajan sin cifrar y alguien conectado a la misma red podría leerlos."
+        },
+        {
+          "id": "c",
+          "texto": "Solo hay riesgo si la web tiene publicidad."
+        },
+        {
+          "id": "d",
+          "texto": "La página tardará más en cargar."
+        }
+      ],
+      "correcta": "b",
+      "explicacion": "Con HTTP los datos viajan en claro. En una red compartida, otra persona podría capturar lo que envías, incluida la contraseña. Los puntos solo la ocultan en tu pantalla."
+    },
+    {
+      "id": "h3",
+      "enunciado": "¿Qué es lo más fiable para comprobar que estás en la web auténtica?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Que la web tenga un diseño profesional y el logotipo correcto."
+        },
+        {
+          "id": "b",
+          "texto": "Que aparezca el candado."
+        },
+        {
+          "id": "c",
+          "texto": "Revisar con atención el nombre del dominio o escribir yo mismo la dirección oficial."
+        },
+        {
+          "id": "d",
+          "texto": "Que la web aparezca la primera en el buscador."
+        }
+      ],
+      "correcta": "c",
+      "explicacion": "El diseño y el logotipo se copian fácilmente, el candado lo puede tener cualquier web y los anuncios del buscador también pueden ser falsos. Lo fiable es el dominio exacto o escribir tú la dirección que ya conoces."
+    }
+  ],
+  "teoria": {
+    "titulo": "HTTP, HTTPS y webs falsas",
+    "duracion": "3-4 minutos",
+    "video": "media/videos/https.mp4",
+    "subtitulos": null,
+    "transcripcion": [
+      "Cuando visitas una web, tu navegador y el servidor se intercambian información. Con HTTP esa información viaja sin cifrar: alguien en la misma red, por ejemplo en una wifi pública, podría leerla o modificarla.",
+      "HTTPS añade cifrado. El navegador lo indica con un candado o con el icono de conexión segura. Así, lo que escribes, como una contraseña, no se puede leer por el camino.",
+      "Pero el candado tiene un límite importante: solo dice que la conexión está cifrada, no quién está al otro lado. Los estafadores también usan HTTPS en sus webs falsas, y es gratis y fácil de conseguir.",
+      "Para saber si una web es la auténtica, mira el dominio con atención: la parte justo antes de .com, .es u otra terminación. Desconfía de dominios con palabras añadidas, guiones o letras cambiadas. Lo más seguro es escribir tú la dirección o usar un marcador guardado, en lugar de pulsar enlaces recibidos.",
+      "Y si el navegador muestra un aviso de que la conexión no es privada, no continúes: puede que alguien se esté haciendo pasar por la web. Avisa al equipo de informática."
+    ]
+  },
+  "caso": {
+    "titulo": "El «apple.com» que no era de Apple, y además tenía candado",
+    "fecha": "Abril de 2017",
+    "parrafos": [
+      "En abril de 2017, el desarrollador Xudong Zheng publicó una demostración que preocupó a muchos expertos. Registró un dominio escrito con letras del alfabeto cirílico que, en los navegadores Chrome y Firefox de entonces, se mostraba en la barra de direcciones como «apple.com».",
+      "Su dominio real era xn--80ak6aa92e.com, pero el navegador lo convertía en caracteres que a la vista eran idénticos a los del dominio auténtico. Además, la web tenía un certificado válido, así que aparecía con el candado de conexión segura.",
+      "A este tipo de engaño se le llama ataque homográfico. Zheng había avisado antes a Google, y Chrome corrigió el problema poco después; en Firefox había que cambiar un ajuste del navegador."
+    ],
+    "leccion": "Una web con candado y con un nombre aparentemente correcto puede ser falsa. Por eso es más seguro escribir tú la dirección o usar tus marcadores que pulsar enlaces, y mantener el navegador actualizado.",
+    "fuentes": [
+      {
+        "nombre": "Fortune: This Phishing Scam Is Almost Impossible to Detect (abril de 2017)",
+        "url": "https://fortune.com/2017/04/18/google-chrome-phishing-scam"
+      },
+      {
+        "nombre": "gHacks: Punycode Phishing Attack fools even die-hard Internet veterans (abril de 2017)",
+        "url": "https://www.ghacks.net/?p=132310"
+      }
+    ]
+  },
+  "actividad": {
+    "tipo": "https",
+    "titulo": "Toma decisiones en una historia interactiva.",
+    "instrucciones": "Vas a vivir cuatro situaciones habituales. Si eliges una opción insegura verás qué pasaría y podrás rebobinar para probar otra, pero solo puntúa tu primera decisión en cada escena.",
+    "introduccion": {
+      "titulo": "Antes de empezar: HTTP y HTTPS en 30 segundos",
+      "parrafos": [
+        "HTTP envía la información sin cifrar. HTTPS la cifra, y el navegador lo indica con un candado.",
+        "El candado protege lo que viaja entre tu ordenador y la web, pero no te dice si la web es la auténtica. Para eso tienes que mirar el dominio."
+      ]
+    },
+    "escenas": [
+      {
+        "titulo": "La wifi de la cafetería",
+        "video": "media/videos/https_escena1.mp4",
+        "situacion": "Estás en una cafetería con wifi gratuita y quieres consultar tu nómina en el portal del empleado. La página de acceso aparece así:",
+        "barra": {
+          "protocolo": "http",
+          "dominio": "portal-empleados.example",
+          "ruta": "/acceso"
+        },
+        "pagina": {
+          "titulo": "Portal del empleado",
+          "texto": [
+            "Usuario: ________",
+            "Contraseña: ________"
+          ]
+        },
+        "pregunta": "¿Qué haces?",
+        "opciones": [
+          {
+            "texto": "Escribo mi usuario y contraseña: solo es un momento.",
+            "segura": false,
+            "consecuencia": "Otra persona conectada a la misma wifi captura tu usuario y tu contraseña, porque viajaban sin cifrar.",
+            "explicacion": "Con HTTP los datos viajan en claro. En una red pública no introduzcas nunca credenciales en una página sin HTTPS."
+          },
+          {
+            "texto": "No inicio sesión: espero a estar en la red de la empresa o uso los datos del móvil, y aviso de que el portal no usa HTTPS.",
+            "segura": true,
+            "explicacion": "Correcto. Sin HTTPS tus credenciales viajarían sin cifrar. Además, avisar permite corregir el problema."
+          }
+        ]
+      },
+      {
+        "titulo": "El paquete retenido",
+        "video": "media/videos/https_escena2.mp4",
+        "situacion": "Recibes un SMS: «Tu paquete está retenido. Paga 1,99 € de gastos de envío». El enlace abre esta página:",
+        "barra": {
+          "protocolo": "https",
+          "dominio": "envios-paqueteria-pago.example",
+          "ruta": "/pagar"
+        },
+        "pagina": {
+          "titulo": "Gastos de envío pendientes: 1,99 €",
+          "texto": [
+            "Introduce los datos de tu tarjeta para liberar el envío."
+          ]
+        },
+        "pregunta": "La web tiene candado. ¿Qué haces?",
+        "opciones": [
+          {
+            "texto": "Pago: tiene candado, así que es segura.",
+            "segura": false,
+            "consecuencia": "La web era falsa. Los estafadores tienen ahora los datos de tu tarjeta y hacen varios cargos.",
+            "explicacion": "El candado solo significa que la conexión está cifrada… con los estafadores. No dice nada de quién hay detrás."
+          },
+          {
+            "texto": "Desconfío del mensaje y consulto el envío en la web oficial de la empresa de paquetería, escribiendo yo la dirección.",
+            "segura": true,
+            "explicacion": "Bien hecho. Los SMS de paquetes retenidos son un fraude muy común. Comprueba siempre por tu cuenta, sin usar el enlace."
+          }
+        ]
+      },
+      {
+        "titulo": "El aviso del navegador",
+        "video": "media/videos/https_escena3.mp4",
+        "situacion": "Vas a entrar en la intranet de tu empresa y, en lugar de la página habitual, el navegador muestra esto:",
+        "barra": {
+          "protocolo": "https",
+          "dominio": "intranet.empresa.example",
+          "ruta": "",
+          "certificadoInvalido": true
+        },
+        "pagina": {
+          "alerta": true,
+          "titulo": "La conexión no es privada",
+          "texto": [
+            "Es posible que alguien esté intentando robar tu información.",
+            "Configuración avanzada | Volver a un sitio seguro"
+          ]
+        },
+        "pregunta": "¿Qué haces?",
+        "opciones": [
+          {
+            "texto": "Pulso «Configuración avanzada» y «Continuar de todos modos».",
+            "segura": false,
+            "consecuencia": "Te conectas a un equipo que se hace pasar por la intranet y que puede ver todo lo que escribes, incluida tu contraseña.",
+            "explicacion": "El aviso indica que el certificado no es válido para esa web: alguien podría estar suplantándola. No lo ignores."
+          },
+          {
+            "texto": "No continúo y aviso al equipo de informática.",
+            "segura": true,
+            "explicacion": "Correcto. Puede ser un error de configuración o un ataque; en ambos casos, quien debe revisarlo es el equipo de informática."
+          }
+        ]
+      },
+      {
+        "titulo": "La oferta imposible",
+        "video": "media/videos/https_escena4.mp4",
+        "situacion": "Un anuncio en redes sociales ofrece unas zapatillas de marca a 19 € (su precio habitual es de 120 €). La tienda es esta:",
+        "barra": {
+          "protocolo": "https",
+          "dominio": "outlet-zapatillas-oficial.example",
+          "ruta": "/oferta"
+        },
+        "pagina": {
+          "titulo": "Últimas unidades: -85 %",
+          "texto": [
+            "Pago solo por transferencia bancaria.",
+            "Oferta válida durante 10 minutos."
+          ]
+        },
+        "pregunta": "¿Qué haces?",
+        "opciones": [
+          {
+            "texto": "Compro: tiene HTTPS y el precio es buenísimo.",
+            "segura": false,
+            "consecuencia": "Haces la transferencia y nunca recibes nada. La tienda desaparece a los pocos días.",
+            "explicacion": "Un precio demasiado bueno, la prisa y aceptar solo transferencias son señales típicas de tienda falsa. HTTPS no lo impide."
+          },
+          {
+            "texto": "Busco opiniones y datos de la empresa, y desconfío del precio, de la prisa y de que solo acepte transferencias.",
+            "segura": true,
+            "explicacion": "Muy bien. Comprobar la tienda antes de comprar y usar métodos de pago con protección evita la mayoría de estafas."
+          }
+        ]
+      }
+    ],
+    "conclusiones": [
+      "HTTPS cifra la conexión, pero no garantiza que la web sea legítima.",
+      "Nunca escribas contraseñas en páginas HTTP, sobre todo en redes públicas.",
+      "No ignores los avisos de conexión no privada del navegador.",
+      "Comprueba el dominio y escribe tú la dirección oficial en lugar de usar enlaces."
+    ]
+  },
+  "resumen": [
+    "HTTP envía la información sin cifrar; HTTPS la cifra y lo indica con un candado.",
+    "El candado no garantiza que la web sea auténtica: los estafadores también lo usan.",
+    "Mira el dominio con atención y, mejor aún, escribe tú la dirección o usa tus marcadores.",
+    "No escribas credenciales en páginas sin HTTPS, sobre todo en wifis públicas.",
+    "Si el navegador avisa de que la conexión no es privada, no continúes y avisa a informática."
+  ]
+}

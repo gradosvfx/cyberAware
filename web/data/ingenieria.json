@@ -1,0 +1,211 @@
+{
+  "id": "ingenieria",
+  "descripcion": "La ingeniería social consiste en manipular a las personas en lugar de atacar a los ordenadores. En este módulo verás cómo los atacantes usan la autoridad, la urgencia y la confianza, y cómo responder.",
+  "preguntas": [
+    {
+      "id": "i1",
+      "enunciado": "Te llama alguien que dice ser del servicio técnico y te pide tu contraseña para «arreglar un problema urgente». ¿Qué haces?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Se la doy, porque es del servicio técnico."
+        },
+        {
+          "id": "b",
+          "texto": "Se la doy, pero la cambio justo después."
+        },
+        {
+          "id": "c",
+          "texto": "No se la doy, porque el servicio técnico no necesita mi contraseña, y aviso al responsable de seguridad."
+        },
+        {
+          "id": "d",
+          "texto": "Le pido que me la envíe por correo para tener constancia."
+        }
+      ],
+      "correcta": "c",
+      "explicacion": "El servicio técnico legítimo no necesita tu contraseña para trabajar. Quien te la pide, aunque diga ser de tu empresa, probablemente es un atacante. No la compartas nunca y comunica el intento."
+    },
+    {
+      "id": "i2",
+      "enunciado": "Tu jefe te escribe desde un número que no conoces y te pide una transferencia urgente y confidencial. ¿Qué es lo más seguro?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Hacerla enseguida, porque es urgente y lo pide mi jefe."
+        },
+        {
+          "id": "b",
+          "texto": "Confirmarlo llamándole a su número habitual o por un canal oficial antes de hacer nada."
+        },
+        {
+          "id": "c",
+          "texto": "Preguntarle por el mismo chat si de verdad es él."
+        },
+        {
+          "id": "d",
+          "texto": "Hacerla, pero solo si la cantidad es pequeña."
+        }
+      ],
+      "correcta": "b",
+      "explicacion": "Si dudas de quién te escribe, verifica por un canal que ya conoces, como su teléfono de siempre. Preguntarle por el mismo chat no sirve: el atacante te dirá que sí es él."
+    },
+    {
+      "id": "i3",
+      "enunciado": "¿Qué técnicas usan más los atacantes de ingeniería social?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Programas muy avanzados para romper el cifrado."
+        },
+        {
+          "id": "b",
+          "texto": "Crear urgencia y aprovechar la autoridad, la confianza o las ganas de ayudar."
+        },
+        {
+          "id": "c",
+          "texto": "Atacar solo a los responsables de informática."
+        },
+        {
+          "id": "d",
+          "texto": "Contactar únicamente por carta."
+        }
+      ],
+      "correcta": "b",
+      "explicacion": "La ingeniería social no ataca a la tecnología, sino a las personas: urgencia, autoridad (un jefe, un técnico), confianza y ganas de ayudar. Por eso cualquier empleado puede ser objetivo."
+    }
+  ],
+  "teoria": {
+    "titulo": "Ingeniería social: cuando el objetivo eres tú",
+    "duracion": "3-4 minutos",
+    "video": "media/videos/ingenieria.mp4",
+    "subtitulos": null,
+    "transcripcion": [
+      "La ingeniería social es el conjunto de técnicas para manipular a una persona y conseguir que haga algo que beneficia al atacante: dar una contraseña, abrir un archivo, hacer un pago o dejar entrar a alguien en la oficina.",
+      "Los atacantes se apoyan en reacciones humanas normales. La autoridad: se hacen pasar por un jefe, un técnico o una entidad oficial. La urgencia: no hay tiempo, tiene que ser ahora. La confianza y las ganas de ayudar: piden un pequeño favor.",
+      "Pueden contactar por teléfono, por correo, por mensajería o incluso en persona. Hoy también usan voces y vídeos falsos creados con inteligencia artificial, así que reconocer una cara o una voz ya no es suficiente.",
+      "La defensa más eficaz es sencilla: ante una petición inusual, para y comprueba por otro canal. Llama al número que ya tienes, no al que te dan. Pregunta a tu responsable. Sigue siempre los procedimientos de la empresa, aunque te pidan saltártelos.",
+      "Desconfía especialmente si te piden secreto, si te presionan con el tiempo o si la petición se sale de lo normal. Y avisa siempre al responsable de seguridad: tu aviso puede evitar que otro compañero caiga."
+    ]
+  },
+  "caso": {
+    "titulo": "Arup: una videollamada con un director financiero falso y 25 millones de dólares",
+    "fecha": "Hong Kong, enero de 2024",
+    "parrafos": [
+      "En enero de 2024, un empleado del departamento financiero de la oficina de Hong Kong de Arup, una ingeniería británica, recibió un mensaje que parecía del director financiero de la empresa, con sede en Reino Unido. Hablaba de una operación confidencial.",
+      "Después participó en una videollamada en la que vio y oyó al director financiero y a otros compañeros. Todos eran falsos: imágenes y voces generadas con inteligencia artificial (deepfakes).",
+      "Siguiendo las instrucciones recibidas, el empleado hizo 15 transferencias a cinco cuentas bancarias, por un total de 200 millones de dólares de Hong Kong, unos 25 millones de dólares estadounidenses.",
+      "El engaño se descubrió cuando el empleado consultó con la sede central. La policía de Hong Kong informó del caso en febrero y Arup confirmó en mayo que había sido la empresa afectada."
+    ],
+    "leccion": "Ver y oír a alguien conocido ya no demuestra que sea quien dice ser. Las peticiones de pago urgentes y confidenciales deben verificarse siempre por un canal independiente y seguir el procedimiento de la empresa, venga de quien venga.",
+    "fuentes": [
+      {
+        "nombre": "South China Morning Post: UK multinational Arup confirmed as victim of HK$200 million deepfake scam (mayo de 2024)",
+        "url": "https://scmp.com/news/hong-kong/law-and-crime/article/3263151/uk-multinational-arup-confirmed-victim-hk200-million-deepfake-scam-used-digital-version-cfo-dupe"
+      },
+      {
+        "nombre": "Dezeen: Arup victim of multimillion-dollar deepfake video scam in Hong Kong (mayo de 2024)",
+        "url": "https://www.dezeen.com/2024/05/17/arup-victim-deepfake-video-scam/"
+      }
+    ]
+  },
+  "actividad": {
+    "tipo": "ingenieria",
+    "titulo": "Responde a los mensajes de un supuesto directivo.",
+    "instrucciones": "Recibes mensajes de alguien que dice ser el director financiero. Elige qué haces en cada momento. Es una simulación: nada de lo que hagas tiene efectos reales.",
+    "contacto": {
+      "nombre": "Javier Ruiz (Dirección Financiera)",
+      "detalle": "Número desconocido: +34 6XX XXX 214"
+    },
+    "pasos": [
+      {
+        "mensajes": [
+          {
+            "texto": "Hola, soy Javier Ruiz, el director financiero. Te escribo desde mi número personal porque estoy de viaje."
+          },
+          {
+            "texto": "Necesito que revises este documento antes de las 12. Es confidencial, no lo comentes con nadie.",
+            "adjunto": "Propuesta_cliente.zip"
+          }
+        ],
+        "opciones": [
+          {
+            "texto": "Descargo y abro el archivo para revisarlo cuanto antes.",
+            "segura": false,
+            "consecuencia": "infeccion",
+            "explicacion": "Un archivo comprimido enviado desde un número desconocido puede contener software malicioso. La prisa y el secreto son señales de alarma.",
+            "respuesta": "Perfecto, gracias. Otra cosa más…"
+          },
+          {
+            "texto": "Antes de abrir nada, llamo a Javier a su número de la empresa para comprobar que es él.",
+            "segura": true,
+            "explicacion": "Bien hecho: comprobar la identidad por un canal que ya conoces es la mejor defensa ante un mensaje inesperado.",
+            "respuesta": "Ahora no puedo hablar, estoy en una reunión. Confía en mí, es urgente."
+          },
+          {
+            "texto": "Reenvío el archivo a un compañero para que lo abra él.",
+            "segura": false,
+            "explicacion": "Pasar el archivo a otra persona no elimina el riesgo: solo lo traslada. Lo correcto es no abrirlo y verificar quién lo envía.",
+            "respuesta": "Vale, pero no tardéis. Otra cosa más…"
+          }
+        ]
+      },
+      {
+        "mensajes": [
+          {
+            "texto": "Olvida el archivo. Entra aquí con tu usuario y contraseña de la empresa para ver el documento compartido: portal-documentos-empresa.example/acceso"
+          }
+        ],
+        "opciones": [
+          {
+            "texto": "Entro con mi usuario y contraseña para no hacerle esperar.",
+            "segura": false,
+            "explicacion": "Es una web falsa para robar tus credenciales. Nunca introduzcas tu contraseña desde un enlace recibido por mensaje.",
+            "respuesta": "Gracias, ya está."
+          },
+          {
+            "texto": "No introduzco mis datos y aviso al equipo de informática o de seguridad.",
+            "segura": true,
+            "explicacion": "Correcto: no das tus credenciales y avisas para que puedan alertar a otros compañeros.",
+            "respuesta": "No hace falta avisar a nadie, de verdad. Es solo un momento."
+          }
+        ]
+      },
+      {
+        "mensajes": [
+          {
+            "texto": "Último favor y te dejo tranquilo: necesito que hoy hagas una transferencia de 4.800 € a este proveedor. No se lo comentes a nadie hasta que yo vuelva."
+          }
+        ],
+        "opciones": [
+          {
+            "texto": "Hago la transferencia: es el director y es urgente.",
+            "segura": false,
+            "explicacion": "Es el «fraude del CEO»: urgencia, autoridad y secreto para que te saltes el procedimiento. Ningún pago debe hacerse fuera de los canales habituales.",
+            "respuesta": "Perfecto. Mañana te pasaré otra."
+          },
+          {
+            "texto": "No hago nada fuera del procedimiento habitual y se lo comunico a mi responsable.",
+            "segura": true,
+            "explicacion": "Exacto: los procedimientos existen para protegerte. Un directivo real lo entenderá.",
+            "respuesta": null
+          }
+        ]
+      }
+    ],
+    "cierre": "Javier Ruiz ha dejado de responder. Era un intento de ingeniería social.",
+    "tecnicas": [
+      "Autoridad: se hace pasar por un directivo.",
+      "Canal no habitual: escribe desde un número personal desconocido.",
+      "Urgencia: todo es para hoy o para dentro de unas horas.",
+      "Secreto: pide que no lo comentes con nadie para que no puedas comprobarlo."
+    ]
+  },
+  "resumen": [
+    "La ingeniería social ataca a las personas: autoridad, urgencia, confianza y ganas de ayudar.",
+    "Ante una petición inusual, para y comprueba por un canal que ya conozcas.",
+    "Ver u oír a alguien conocido ya no basta: existen voces y vídeos falsos.",
+    "Sigue siempre los procedimientos de la empresa, aunque te pidan saltártelos.",
+    "Avisa al responsable de seguridad: tu aviso protege también a tus compañeros."
+  ]
+}

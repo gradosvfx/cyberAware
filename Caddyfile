@@ -1,0 +1,53 @@
+# Caddyfile de CyberAware: HTTPS, reparto de rutas y restricción por IP.
+# SITE_ADDRESS y ADMIN_IP se leen del archivo .env (a través de docker-compose.yml).
+
+{$SITE_ADDRESS} {
+	# Entorno de pruebas: certificado de la autoridad interna de Caddy.
+	# En una implantación real con dominio propio se quita esta línea y Caddy
+	# obtiene el certificado de Let's Encrypt automáticamente.
+	tls internal
+
+	# Registro de accesos en JSON para CrowdSec; se conserva como máximo 7 días.
+	log {
+		output file /var/log/caddy/access.log {
+			roll_size 10MiB
+			roll_keep 7
+			roll_keep_for 168h
+		}
+		format json
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "no-referrer"
+		X-Frame-Options "DENY"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+
+	# 1. Panel de administración de PocketBase: solo desde el equipo de administración.
+	@panel path /_ /_/*
+	handle @panel {
+		@no_admin not remote_ip {$ADMIN_IP}
+		respond @no_admin "Acceso no permitido" 403
+		reverse_proxy pocketbase:8090
+	}
+
+	# 2. API de PocketBase, siempre a través del WAF.
+	#    Desde otros equipos solo se permiten las rutas que usa la plataforma.
+	handle /api/* {
+		@bloqueada {
+			not remote_ip {$ADMIN_IP}
+			not path /api/collections/users/auth-with-password /api/collections/users/records /api/collections/users/records/* /api/collections/progreso/records /api/collections/progreso/records/*
+		}
+		respond @bloqueada "Acceso no permitido" 403
+		reverse_proxy waf:8080
+	}
+
+	# 3. Web estática (Nginx), con política de seguridad de contenidos.
+	handle {
+		header Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+		reverse_proxy web:80
+	}
+}

@@ -1,0 +1,11 @@
+# Secretos y configuración local
+.env
+
+# Datos locales (nunca al repositorio)
+copias-local/
+pb_data/
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
