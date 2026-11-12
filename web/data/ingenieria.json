@@ -4,111 +4,111 @@
   "preguntas": [
     {
       "id": "i1",
-      "enunciado": "Te llama alguien que dice ser del servicio técnico y te pide tu contraseña para «arreglar un problema urgente». ¿Qué haces?",
+      "enunciado": "Recibes un correo de una persona que se identifica como responsable de informática. Te indica que debes descargar un archivo adjunto para solucionar un supuesto problema de seguridad. ¿Cómo deberías actuar?",
       "opciones": [
         {
           "id": "a",
-          "texto": "Se la doy, porque es del servicio técnico."
+          "texto": "Descargarlo inmediatamente para evitar que el problema empeore."
         },
         {
           "id": "b",
-          "texto": "Se la doy, pero la cambio justo después."
+          "texto": "Responder al correo solicitando que confirme que el archivo es seguro."
         },
         {
           "id": "c",
-          "texto": "No se la doy, porque el servicio técnico no necesita mi contraseña, y aviso al responsable de seguridad."
+          "texto": "Comprobar la identidad del remitente por un canal oficial y verificar el archivo antes de abrirlo."
         },
         {
           "id": "d",
-          "texto": "Le pido que me la envíe por correo para tener constancia."
+          "texto": "Reenviar el archivo a otros compañeros para comprobar si pueden abrirlo."
         }
       ],
       "correcta": "c",
-      "explicacion": "El servicio técnico legítimo no necesita tu contraseña para trabajar. Quien te la pide, aunque diga ser de tu empresa, probablemente es un atacante. No la compartas nunca y comunica el intento."
+      "explicacion": "Los atacantes pueden hacerse pasar por personal de informática para conseguir que sus víctimas descarguen archivos maliciosos. Antes de abrir cualquier documento inesperado, es importante verificar quién lo envía y confirmar su legitimidad mediante un canal independiente."
     },
     {
       "id": "i2",
-      "enunciado": "Tu jefe te escribe desde un número que no conoces y te pide una transferencia urgente y confidencial. ¿Qué es lo más seguro?",
+      "enunciado": "Una persona se presenta en tu lugar de trabajo y afirma que ha olvidado su tarjeta de acceso. Te pide que mantengas la puerta abierta para poder entrar. ¿Qué deberías hacer?",
       "opciones": [
         {
           "id": "a",
-          "texto": "Hacerla enseguida, porque es urgente y lo pide mi jefe."
+          "texto": "Dejarla pasar porque parece conocer las instalaciones."
         },
         {
           "id": "b",
-          "texto": "Confirmarlo llamándole a su número habitual o por un canal oficial antes de hacer nada."
+          "texto": "Permitirle entrar si asegura que tiene una reunión programada."
         },
         {
           "id": "c",
-          "texto": "Preguntarle por el mismo chat si de verdad es él."
+          "texto": "Acompañarla hasta el interior para comprobar después quién es."
         },
         {
           "id": "d",
-          "texto": "Hacerla, pero solo si la cantidad es pequeña."
+          "texto": "No permitirle el acceso y dirigirla al procedimiento oficial de identificación y autorización."
         }
       ],
-      "correcta": "b",
-      "explicacion": "Si dudas de quién te escribe, verifica por un canal que ya conoces, como su teléfono de siempre. Preguntarle por el mismo chat no sirve: el atacante te dirá que sí es él."
+      "correcta": "d",
+      "explicacion": "Los atacantes pueden aprovechar la confianza y la cortesía para conseguir acceso físico a instalaciones restringidas. Esta técnica se conoce como tailgating. Cada persona debe utilizar sus propias credenciales y respetar los controles de acceso."
     },
     {
       "id": "i3",
-      "enunciado": "¿Qué técnicas usan más los atacantes de ingeniería social?",
+      "enunciado": "¿Cuál de estas situaciones representa un intento de ingeniería social?",
       "opciones": [
         {
           "id": "a",
-          "texto": "Programas muy avanzados para romper el cifrado."
+          "texto": "Un programa detecta automáticamente una vulnerabilidad en un servidor."
         },
         {
           "id": "b",
-          "texto": "Crear urgencia y aprovechar la autoridad, la confianza o las ganas de ayudar."
+          "texto": "Una persona se hace pasar por un proveedor para conseguir información interna de una empresa."
         },
         {
           "id": "c",
-          "texto": "Atacar solo a los responsables de informática."
+          "texto": "Un administrador instala una actualización de seguridad."
         },
         {
           "id": "d",
-          "texto": "Contactar únicamente por carta."
+          "texto": "Un antivirus bloquea un archivo potencialmente peligroso."
         }
       ],
       "correcta": "b",
-      "explicacion": "La ingeniería social no ataca a la tecnología, sino a las personas: urgencia, autoridad (un jefe, un técnico), confianza y ganas de ayudar. Por eso cualquier empleado puede ser objetivo."
+      "explicacion": "La ingeniería social consiste en manipular a las personas para obtener información, acceso o beneficios. Suplantar la identidad de un proveedor es una técnica habitual para generar confianza y conseguir información que normalmente estaría protegida."
     }
   ],
   "teoria": {
     "titulo": "Ingeniería social: cuando el objetivo eres tú",
     "duracion": "3-4 minutos",
-    "video": "media/videos/ingenieria.mp4",
+    "video": "media/videos/ingenieriasocial_video.mp4",
     "subtitulos": null,
     "transcripcion": [
-      "La ingeniería social es el conjunto de técnicas para manipular a una persona y conseguir que haga algo que beneficia al atacante: dar una contraseña, abrir un archivo, hacer un pago o dejar entrar a alguien en la oficina.",
-      "Los atacantes se apoyan en reacciones humanas normales. La autoridad: se hacen pasar por un jefe, un técnico o una entidad oficial. La urgencia: no hay tiempo, tiene que ser ahora. La confianza y las ganas de ayudar: piden un pequeño favor.",
-      "Pueden contactar por teléfono, por correo, por mensajería o incluso en persona. Hoy también usan voces y vídeos falsos creados con inteligencia artificial, así que reconocer una cara o una voz ya no es suficiente.",
-      "La defensa más eficaz es sencilla: ante una petición inusual, para y comprueba por otro canal. Llama al número que ya tienes, no al que te dan. Pregunta a tu responsable. Sigue siempre los procedimientos de la empresa, aunque te pidan saltártelos.",
-      "Desconfía especialmente si te piden secreto, si te presionan con el tiempo o si la petición se sale de lo normal. Y avisa siempre al responsable de seguridad: tu aviso puede evitar que otro compañero caiga."
-    ]
+    "La ingeniería social engloba diferentes técnicas de manipulación utilizadas por los ciberdelincuentes para influir en el comportamiento de las personas y conseguir información confidencial, acceso a sistemas o incluso provocar pagos y transferencias de dinero.",
+    "Para conseguirlo, los atacantes aprovechan diferentes comportamientos humanos. Pueden utilizar la autoridad, haciéndose pasar por responsables o técnicos; generar urgencia para evitar que la víctima piense con calma; o crear una falsa sensación de confianza para conseguir su colaboración.",
+    "Estos engaños pueden producirse a través de llamadas telefónicas, correos electrónicos, mensajes de texto o encuentros presenciales. También pueden utilizar herramientas de inteligencia artificial para generar voces e imágenes falsas que imitan a personas reales.",
+    "La mejor forma de protegerse es comprobar siempre las solicitudes que resulten extrañas o inesperadas. Si alguien solicita información, dinero o acceso a instalaciones, verifica su identidad mediante un canal independiente y conocido. Nunca utilices únicamente los datos de contacto que te proporciona esa persona.",
+    "También debes respetar los protocolos de seguridad de la empresa, aunque alguien te presione para actuar rápidamente o te pida mantener la operación en secreto. Ante cualquier sospecha, informa al responsable de seguridad para que pueda investigar el incidente y evitar que otros compañeros resulten afectados."
+  ]
   },
   "caso": {
-    "titulo": "Arup: una videollamada con un director financiero falso y 25 millones de dólares",
-    "fecha": "Hong Kong, enero de 2024",
-    "parrafos": [
-      "En enero de 2024, un empleado del departamento financiero de la oficina de Hong Kong de Arup, una ingeniería británica, recibió un mensaje que parecía del director financiero de la empresa, con sede en Reino Unido. Hablaba de una operación confidencial.",
-      "Después participó en una videollamada en la que vio y oyó al director financiero y a otros compañeros. Todos eran falsos: imágenes y voces generadas con inteligencia artificial (deepfakes).",
-      "Siguiendo las instrucciones recibidas, el empleado hizo 15 transferencias a cinco cuentas bancarias, por un total de 200 millones de dólares de Hong Kong, unos 25 millones de dólares estadounidenses.",
-      "El engaño se descubrió cuando el empleado consultó con la sede central. La policía de Hong Kong informó del caso en febrero y Arup confirmó en mayo que había sido la empresa afectada."
-    ],
-    "leccion": "Ver y oír a alguien conocido ya no demuestra que sea quien dice ser. Las peticiones de pago urgentes y confidenciales deben verificarse siempre por un canal independiente y seguir el procedimiento de la empresa, venga de quien venga.",
-    "fuentes": [
-      {
-        "nombre": "South China Morning Post: UK multinational Arup confirmed as victim of HK$200 million deepfake scam (mayo de 2024)",
-        "url": "https://scmp.com/news/hong-kong/law-and-crime/article/3263151/uk-multinational-arup-confirmed-victim-hk200-million-deepfake-scam-used-digital-version-cfo-dupe"
-      },
-      {
-        "nombre": "Dezeen: Arup victim of multimillion-dollar deepfake video scam in Hong Kong (mayo de 2024)",
-        "url": "https://www.dezeen.com/2024/05/17/arup-victim-deepfake-video-scam/"
-      }
-    ]
-  },
+  "titulo": "MGM Resorts: una llamada telefónica permitió iniciar un ciberataque contra una gran cadena hotelera",
+  "fecha": "Estados Unidos, septiembre de 2023",
+  "parrafos": [
+    "En septiembre de 2023, MGM Resorts, una de las principales compañías hoteleras y de casinos de Estados Unidos, sufrió un importante ciberataque que afectó a sus sistemas informáticos. El incidente provocó interrupciones en las reservas, los pagos electrónicos, las máquinas de los casinos y diferentes servicios de sus hoteles.",
+    "Según la información publicada sobre el incidente, los atacantes investigaron previamente a un empleado de la empresa mediante información disponible en LinkedIn. Posteriormente, contactaron con el servicio de asistencia técnica haciéndose pasar por ese trabajador para conseguir que restablecieran sus credenciales y facilitaran el acceso a los sistemas internos.",
+    "La operación estuvo relacionada con el grupo de ciberdelincuentes Scattered Spider, conocido por utilizar técnicas de ingeniería social para engañar a empleados y conseguir accesos legítimos. Una vez dentro, los atacantes pudieron avanzar por la infraestructura de la empresa y desplegar un ataque de ransomware.",
+    "El incidente provocó importantes interrupciones operativas y pérdidas económicas para MGM Resorts. La compañía estimó que el impacto negativo sobre sus resultados del tercer trimestre fue de aproximadamente 100 millones de dólares."
+  ],
+  "leccion": "Los ciberdelincuentes no siempre necesitan explotar una vulnerabilidad técnica para entrar en una empresa. En ocasiones, basta con manipular a un empleado para conseguir que facilite un acceso legítimo. Verificar la identidad de quien solicita ayuda, aplicar procedimientos estrictos para restablecer credenciales y formar al personal en ingeniería social son medidas fundamentales para prevenir estos ataques.",
+  "fuentes": [
+    {
+      "nombre": "MGM Resorts International: Form 8-K, impacto del incidente de ciberseguridad (septiembre de 2023)",
+      "url": "https://www.sec.gov/Archives/edgar/data/789570/000078957023000039/mgm-20230913.htm"
+    },
+    {
+      "nombre": "CISA: Scattered Spider (Cybersecurity Advisory)",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a"
+    }
+  ]
+},
   "actividad": {
     "tipo": "ingenieria",
     "titulo": "Responde a los mensajes de un supuesto directivo.",
@@ -202,10 +202,10 @@
     ]
   },
   "resumen": [
-    "La ingeniería social ataca a las personas: autoridad, urgencia, confianza y ganas de ayudar.",
-    "Ante una petición inusual, para y comprueba por un canal que ya conozcas.",
-    "Ver u oír a alguien conocido ya no basta: existen voces y vídeos falsos.",
-    "Sigue siempre los procedimientos de la empresa, aunque te pidan saltártelos.",
-    "Avisa al responsable de seguridad: tu aviso protege también a tus compañeros."
-  ]
+  "La ingeniería social manipula a las personas mediante la autoridad, la urgencia, la confianza y la suplantación de identidad.",
+  "Comprueba siempre las solicitudes sospechosas mediante canales oficiales e independientes.",
+  "No abras archivos ni facilites información sin verificar previamente quién los solicita.",
+  "Respeta los controles de acceso y los procedimientos de seguridad de la empresa.",
+  "Informa al responsable de seguridad ante cualquier intento de engaño o actividad sospechosa."
+]
 }

@@ -4,23 +4,23 @@
   "preguntas": [
     {
       "id": "c1",
-      "enunciado": "¿Qué hace más difícil adivinar una contraseña?",
+      "enunciado": "¿Qué práctica ayuda a crear una contraseña más segura?",
       "opciones": [
         {
           "id": "a",
-          "texto": "Que tenga mayúsculas, minúsculas y un número, aunque solo tenga 8 caracteres."
+          "texto": "Utilizar una combinación de datos personales y fechas importantes."
         },
         {
           "id": "b",
-          "texto": "Que sea larga, por ejemplo una frase de varias palabras que no tengan relación entre sí."
+          "texto": "Crear una contraseña larga con palabras aleatorias y difíciles de relacionar."
         },
         {
           "id": "c",
-          "texto": "Que incluya el nombre de la empresa y el año actual."
+          "texto": "Utilizar la misma contraseña en diferentes plataformas."
         },
         {
           "id": "d",
-          "texto": "Cambiarla todos los meses por otra parecida."
+          "texto": "Añadir únicamente un número al final de una palabra conocida."
         }
       ],
       "correcta": "b",
@@ -28,88 +28,100 @@
     },
     {
       "id": "c2",
-      "enunciado": "Usas la misma contraseña en el correo del trabajo y en una tienda online. La tienda sufre una filtración de datos. ¿Qué riesgo hay?",
+      "enunciado": "¿Qué puede ocurrir si utilizas la misma contraseña en varias plataformas y una de ellas sufre un ciberataque?",
       "opciones": [
         {
           "id": "a",
-          "texto": "Ninguno, porque son servicios distintos."
+          "texto": "Los atacantes solo podrán acceder a la plataforma que ha sufrido el ataque."
         },
         {
           "id": "b",
-          "texto": "Solo se pierde la cuenta de la tienda."
+          "texto": "La contraseña dejará de funcionar automáticamente en todos los servicios."
         },
         {
           "id": "c",
-          "texto": "Los atacantes pueden probar esa misma contraseña en tu correo del trabajo y en otros servicios."
+          "texto": "Los atacantes podrían utilizar las credenciales filtradas para intentar acceder a otras cuentas."
         },
         {
           "id": "d",
-          "texto": "La filtración borra la contraseña y hay que crear otra."
+          "texto": "La cuenta quedará protegida porque las plataformas son independientes."
         }
       ],
       "correcta": "c",
-      "explicacion": "Los atacantes prueban automáticamente las contraseñas filtradas en muchos otros servicios. Si la repites, una filtración en cualquier web pone en riesgo todas tus cuentas. Por eso cada servicio debe tener su propia contraseña."
+      "explicacion": "Cuando utilizas la misma contraseña en diferentes servicios, una filtración de datos puede poner en peligro todas tus cuentas. \nLos atacantes pueden probar las credenciales obtenidas en otros servicios, como el correo electrónico del trabajo, redes sociales o plataformas bancarias. \nEsta técnica se conoce como credential stuffing. Por eso, es importante utilizar una contraseña diferente para cada servicio y activar la autenticación multifactor (MFA) siempre que sea posible."
     },
     {
       "id": "c3",
-      "enunciado": "¿Para qué sirve la verificación en dos pasos?",
+      "enunciado": "¿Qué ventaja ofrece activar la autenticación en dos pasos (2FA) en una cuenta?",
       "opciones": [
         {
           "id": "a",
-          "texto": "Para no tener que recordar la contraseña."
+          "texto": "Permite acceder a la cuenta sin necesidad de utilizar una contraseña."
         },
         {
           "id": "b",
-          "texto": "Para que, aunque alguien robe tu contraseña, también necesite un segundo factor, como un código en tu móvil."
+          "texto": "Añade una segunda comprobación de identidad, dificultando el acceso incluso si alguien consigue robar la contraseña."
         },
         {
           "id": "c",
-          "texto": "Para que la contraseña caduque antes."
+          "texto": "Evita que la contraseña tenga que actualizarse periódicamente."
         },
         {
           "id": "d",
-          "texto": "Para cifrar los correos que envías."
+          "texto": "Impide que los dispositivos conectados puedan sufrir ciberataques."
         }
       ],
       "correcta": "b",
-      "explicacion": "La verificación en dos pasos añade una segunda comprobación (un código, una aplicación o una llave física). Así, una contraseña robada por sí sola no basta para entrar en tu cuenta."
+      "explicacion": "La autenticación en dos pasos añade una capa extra de seguridad al inicio de sesión. Además de introducir la contraseña, el usuario debe verificar su identidad mediante un segundo factor, como un código enviado al móvil, una aplicación de autenticación o una llave de seguridad. \nDe esta forma, aunque un atacante consiga conocer la contraseña, necesitará superar esa segunda comprobación para acceder a la cuenta."
     }
   ],
   "teoria": {
     "titulo": "Contraseñas que protegen de verdad",
     "duracion": "3-4 minutos",
-    "video": "media/videos/contrasenas.mp4",
+    "video": "media/videos/password_video.mp4",
     "subtitulos": null,
     "transcripcion": [
-      "Una contraseña es la llave de tus cuentas. Los atacantes no suelen adivinarlas una a una: usan programas que prueban millones de combinaciones y listas de contraseñas filtradas en otros ataques.",
-      "Lo que más protege es la longitud. Una contraseña de 15 caracteres o más es mucho más difícil de romper que una corta llena de símbolos. Una buena opción es una frase de varias palabras sin relación entre sí, por ejemplo cuatro palabras al azar separadas por guiones.",
-      "Evita lo previsible: palabras comunes, tu nombre, el de la empresa, fechas, secuencias como 1234 o qwerty, y trucos conocidos como cambiar la o por un cero. Los programas de ataque ya prueban esas variaciones.",
-      "Usa una contraseña distinta para cada servicio. Si una web sufre una filtración, los atacantes probarán esa contraseña en tu correo, en tu banco y en las herramientas del trabajo. Un gestor de contraseñas te permite tener una distinta en cada sitio sin tener que memorizarlas.",
-      "Activa la verificación en dos pasos siempre que puedas. Aunque roben tu contraseña, el atacante necesitará también el código de tu móvil o tu llave de seguridad.",
-      "Y nunca compartas tu contraseña: ni con compañeros ni con alguien que diga ser del servicio técnico. Nadie legítimo te la va a pedir."
+    "Las contraseñas son la primera barrera de seguridad para proteger nuestras cuentas y nuestra información personal. Sin embargo, los ciberdelincuentes utilizan herramientas automatizadas capaces de probar millones de combinaciones y aprovechar contraseñas que ya se han filtrado en otros ataques.",
+    "La longitud es uno de los factores más importantes para conseguir una contraseña segura. Cuantos más caracteres tenga, más difícil será descubrirla mediante ataques automatizados. Se recomienda utilizar contraseñas de al menos 15 caracteres. Una buena alternativa es crear una frase formada por varias palabras aleatorias que no tengan relación entre sí, separadas, por ejemplo, mediante guiones.",
+    "Es importante evitar contraseñas fáciles de predecir, como nombres propios, fechas de nacimiento, nombres de empresas o secuencias habituales como 1234 o qwerty. Tampoco es recomendable sustituir letras por números, como cambiar la letra o por un cero, ya que los programas utilizados por los atacantes ya contemplan estas combinaciones.",
+    "Nunca debes reutilizar la misma contraseña en diferentes servicios. Si una plataforma sufre una filtración de datos, los atacantes pueden intentar utilizar esas mismas credenciales para acceder a otras cuentas, como el correo electrónico, servicios bancarios o herramientas de trabajo. Para evitarlo, es recomendable utilizar un gestor de contraseñas, que permite almacenar y generar claves diferentes para cada plataforma.",
+    "Otra medida fundamental es activar la verificación en dos pasos (2FA) siempre que esté disponible. Este sistema añade una comprobación adicional al iniciar sesión. De esta manera, aunque alguien consiga tu contraseña, necesitará superar un segundo método de verificación, como un código del móvil o una llave de seguridad.",
+    "Por último, nunca compartas tus contraseñas con otras personas. Ni compañeros de trabajo ni supuestos técnicos de soporte deberían solicitártelas. Los servicios legítimos no necesitan conocer tu contraseña para ayudarte a resolver una incidencia."
+    ],
+    "ideas_clave": [
+    "Utiliza contraseñas largas, preferiblemente de 15 caracteres o más, para dificultar los ataques automatizados.",
+    "Evita utilizar nombres, fechas personales o combinaciones fáciles de adivinar.",
+    "Crea una contraseña diferente para cada cuenta o servicio.",
+    "Utiliza un gestor de contraseñas para almacenar y generar claves seguras.",
+    "Activa la autenticación en dos pasos (2FA) para añadir una capa extra de protección.",
+    "No compartas nunca tus contraseñas, ni siquiera con personas que se identifiquen como personal de soporte técnico."
     ]
   },
   "caso": {
-    "titulo": "Colonial Pipeline: una sola contraseña paró el mayor oleoducto de Estados Unidos",
-    "fecha": "Estados Unidos, abril y mayo de 2021",
-    "parrafos": [
-      "En mayo de 2021, la empresa Colonial Pipeline, que transporta combustible por la costa este de Estados Unidos, sufrió un ataque de ransomware. Para contenerlo, detuvo por completo su red de oleoductos, de unos 8.800 kilómetros, y en varios estados hubo gasolineras sin combustible.",
-      "Según la investigación, los atacantes entraron a finales de abril a través de una cuenta de VPN antigua que ya no se usaba, pero que seguía activa. Les bastó con el nombre de usuario y la contraseña, porque esa cuenta no tenía verificación en dos pasos.",
-      "El director ejecutivo explicó ante el Senado que la contraseña no era sencilla. Aun así, los investigadores la encontraron en una lista de contraseñas filtradas, lo que apunta a que se había reutilizado en otro servicio que fue atacado.",
-      "La empresa pagó un rescate de unos 4,4 millones de dólares; las autoridades recuperaron después una parte."
-    ],
-    "leccion": "Una contraseña complicada no basta si se repite en otros servicios: cuando uno de ellos se filtra, la contraseña queda expuesta. Usar contraseñas distintas, activar la verificación en dos pasos y dar de baja las cuentas que ya no se usan habría cerrado esa puerta.",
-    "fuentes": [
-      {
-        "nombre": "GovInfoSecurity: Colonial CEO at Senate Hearing Details Ransomware Attack (junio de 2021)",
-        "url": "https://www.govinfosecurity.com/colonial-ceo-at-senate-hearing-details-ransomware-attack-a-16836"
-      },
-      {
-        "nombre": "Al Jazeera / Bloomberg: Hackers breached Colonial Pipeline with one compromised password (junio de 2021)",
-        "url": "https://www.aljazeera.com/economy/2021/6/4/hackers-breached-colonial-pipeline-with-one-compromised-password"
-      }
-    ]
-  },
+  "titulo": "23andMe: la reutilización de contraseñas expuso los datos genéticos de millones de personas",
+  "fecha": "Estados Unidos, abril a octubre de 2023",
+  "parrafos": [
+    "En octubre de 2023, la empresa 23andMe, especializada en pruebas genéticas y análisis de ADN, confirmó que varios atacantes habían conseguido acceder sin autorización a cuentas de sus usuarios. La información comprometida incluía datos personales, información genética y perfiles relacionados con familiares biológicos. Aunque los atacantes accedieron directamente a más de 18.000 cuentas, la información relacionada con casi 7 millones de clientes terminó viéndose afectada debido a la función DNA Relatives, que permitía consultar información de personas con coincidencias genéticas.",
+    "La investigación determinó que los atacantes utilizaron una técnica conocida como credential stuffing. Consiste en probar automáticamente combinaciones de correos electrónicos y contraseñas obtenidas de filtraciones anteriores en otras plataformas. De esta manera, consiguieron entrar en cuentas cuyos propietarios habían reutilizado las mismas credenciales en diferentes servicios.",
+    "El problema se agravó porque, en aquel momento, más de tres cuartas partes de los usuarios tenían únicamente la contraseña como medida de protección de sus cuentas. La investigación también señaló que la empresa no había establecido controles suficientes para detectar y prevenir este tipo de ataques.",
+    "Tras descubrir el incidente, 23andMe obligó a sus usuarios a cambiar sus contraseñas y recomendó activar la autenticación multifactor (MFA). Posteriormente, las autoridades de protección de datos de Canadá y Reino Unido investigaron el caso y señalaron importantes deficiencias en las medidas de seguridad de la plataforma."
+  ],
+  "leccion": "Reutilizar una contraseña puede poner en peligro información mucho más sensible de lo que imaginamos. Los atacantes pueden aprovechar credenciales filtradas en otros servicios para acceder a nuestras cuentas mediante ataques automatizados. Utilizar contraseñas únicas, activar la autenticación multifactor y establecer mecanismos de detección de accesos sospechosos son medidas fundamentales para evitar este tipo de incidentes.",
+  "fuentes": [
+    {
+      "nombre": "Office of the Privacy Commissioner of Canada: Joint investigation into a data breach at 23andMe (junio de 2025)",
+      "url": "https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2025/pipeda-2025-001/"
+    },
+    {
+      "nombre": "23andMe: Addressing Data Security Concerns – Action Plan (octubre de 2023)",
+      "url": "https://www.23andme.org/blog/articles/addressing-data-security-concerns/"
+    },
+    {
+      "nombre": "U.S. Securities and Exchange Commission: 23andMe Form 8-K (octubre de 2023)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1804591/000119312523253488/d520529d8k.htm"
+    }
+  ]
+},
   "actividad": {
     "tipo": "contrasenas",
     "titulo": "Crea una contraseña fuerte (inventada) con ayuda del comprobador.",
@@ -195,10 +207,10 @@
     ]
   },
   "resumen": [
-    "La longitud es lo más importante: usa 15 caracteres o más, por ejemplo una frase de palabras sin relación.",
-    "Evita lo previsible: palabras comunes, nombres, fechas, secuencias y cambios de letras por números.",
-    "Una contraseña distinta para cada servicio; un gestor de contraseñas te ayuda a no repetirlas.",
-    "Activa la verificación en dos pasos: una contraseña robada no bastará para entrar.",
-    "Nunca compartas tu contraseña, aunque te la pida alguien que diga ser del servicio técnico."
-  ]
+  "Utiliza contraseñas largas, de al menos 15 caracteres, preferiblemente combinando varias palabras aleatorias.",
+  "Evita contraseñas fáciles de adivinar, como nombres, fechas, palabras habituales o secuencias sencillas.",
+  "No reutilices contraseñas entre diferentes plataformas. Utiliza un gestor para almacenarlas de forma segura.",
+  "Activa la autenticación multifactor (MFA) para añadir una segunda capa de protección a tus cuentas.",
+  "No compartas tus credenciales con nadie, ni siquiera con personas que afirmen pertenecer al servicio técnico."
+]
 }
