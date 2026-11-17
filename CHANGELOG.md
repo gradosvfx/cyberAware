@@ -47,3 +47,31 @@ reflejan también en su tabla de control de versiones.
 - Volumen adicional crowdsec_config para conservar la configuración y el hub de CrowdSec.
 - El journald de los contenedores se configura en /etc/docker/daemon.json del servidor, no en
   el compose (Docker Desktop no lo admite).
+
+## [0.3.0] - 2026-11-17
+
+### Añadido
+- Vídeos de teoría de los cuatro módulos en web/media/videos y enlazados en los JSON
+  (phishing_video.mp4 y http_video.mp4 en phishing.json y https.json).
+
+### Comprobado en el entorno de implantación (Docker Desktop)
+- WAF en modo bloqueo (WAF_MODO=On): la plataforma funciona con normalidad y una inyección
+  SQL de prueba recibe 403.
+- Con ADMIN_IP=127.0.0.1/32, el panel y las rutas de administración devuelven 403 a todos los
+  equipos y la plataforma sigue funcionando.
+- CrowdSec detecta un escaneo de rutas (crowdsecurity/http-probing) y genera la decisión de
+  bloqueo; la IP que aparece es interna de Docker (172.19.0.1).
+- Copia manual de PocketBase, empaquetado en copias-local con el contenedor de copias y
+  restauración desde el panel.
+
+### Cambios respecto a la memoria técnica (versión 02.00)
+- Entorno de implantación: Docker Desktop en el ordenador de cada integrante (dos
+  instalaciones iguales, cada una con su base de datos) en lugar de una máquina virtual con
+  Ubuntu Server. Docker Desktop no conserva la IP de origen, por lo que la restricción por IP
+  y el bloqueo de CrowdSec se adaptan o pasan al diseño de producción.
+- Se elimina la máquina virtual de preproducción: los cambios se prueban en el entorno local
+  de cada integrante.
+- ADMIN_IP vale 0.0.0.0/0 para administrar y 127.0.0.1/32 durante las demostraciones y la
+  prueba con usuarios.
+- Diseño de producción documentado: servidor en Internet con dominio propio, Let's Encrypt,
+  UFW, SSH con clave, bouncer de CrowdSec y acceso de los administradores por IP fija o VPN.
