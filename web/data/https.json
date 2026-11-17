@@ -78,7 +78,7 @@
   "teoria": {
     "titulo": "HTTP, HTTPS y webs falsas",
     "duracion": "3-4 minutos",
-    "video": "media/videos/https.mp4",
+    "video": "media/videos/http_video.mp4",
     "subtitulos": null,
     "transcripcion": [
       "Cuando visitas una web, tu navegador y el servidor se intercambian información. Con HTTP esa información viaja sin cifrar: alguien en la misma red, por ejemplo en una wifi pública, podría leerla o modificarla.",

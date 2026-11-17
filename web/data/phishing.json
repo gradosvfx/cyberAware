@@ -78,7 +78,7 @@
   "teoria": {
     "titulo": "Cómo reconocer un correo de phishing",
     "duracion": "3-4 minutos",
-    "video": "media/videos/phishing.mp4",
+    "video": "media/videos/phishing_video.mp4",
     "subtitulos": null,
     "transcripcion": [
       "El phishing es un engaño en el que alguien se hace pasar por una empresa o persona de confianza para que pulses un enlace, abras un archivo o entregues tus datos. Suele llegar por correo, pero también por SMS o mensajería.",
