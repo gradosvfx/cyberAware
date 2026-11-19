@@ -100,8 +100,8 @@
   "leccion": "Los ciberdelincuentes no siempre necesitan explotar una vulnerabilidad técnica para entrar en una empresa. En ocasiones, basta con manipular a un empleado para conseguir que facilite un acceso legítimo. Verificar la identidad de quien solicita ayuda, aplicar procedimientos estrictos para restablecer credenciales y formar al personal en ingeniería social son medidas fundamentales para prevenir estos ataques.",
   "fuentes": [
     {
-      "nombre": "MGM Resorts International: Form 8-K, impacto del incidente de ciberseguridad (septiembre de 2023)",
-      "url": "https://www.sec.gov/Archives/edgar/data/789570/000078957023000039/mgm-20230913.htm"
+      "nombre": "El ciberataque del MGM Grand supuestamente fue causado por una llamada telefónica de 10 minutos",
+      "url": "https://es.gizmodo.com/mgm-grand-ciberataque-causado-por-una-llamada-telefonic-1850834919"
     },
     {
       "nombre": "CISA: Scattered Spider (Cybersecurity Advisory)",
